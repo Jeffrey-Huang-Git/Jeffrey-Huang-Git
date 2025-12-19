@@ -84,16 +84,9 @@
   }
 
   function finishChat() {
-    const transcript = encodeURIComponent(JSON.stringify(chatLog));
 
-    // CHANGE THIS to your actual Qualtrics survey URL
-    const qualtricsReturnUrl =
-      "https://upenn.co1.qualtrics.com/jfe/form/SV_1Bu9iYEBjEXWLUG";
-
-    const redirectUrl =
-      `${qualtricsReturnUrl}?rid=${rid}&chat_transcript=${transcript}`;
-
-    window.location.href = redirectUrl;
+    // Close this tab (works because it was opened via window.open)
+    window.close();
   }
 </script>
 
